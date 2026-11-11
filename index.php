@@ -13,7 +13,8 @@ require 'conexion.php';
 <body>
     <h1>Historias de usuario por sprint</h1>
     <a href="formulario_historia.php">Registrar una historia</a> |
-    <a href="sprints.php">Sprints</a>
+    <a href="sprints.php">Sprints</a> |
+    <a href="informe.php">Informe</a>
 
     <?php
     if (!empty($_GET['error'])) {
