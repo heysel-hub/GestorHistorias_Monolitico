@@ -21,30 +21,29 @@ $porSprint = $conexDB->query("select s.nombre, $columnas from historias h inner 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informe</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
+    <nav>
+        <a href="index.php">Historias</a>
+        <a href="formulario_historia.php">Nueva historia</a>
+        <a href="sprints.php">Sprints</a>
+        <a href="informe.php">Informe</a>
+    </nav>
+
     <h1>Informe de avance</h1>
-    <a href="index.php">Volver</a>
 
     <h2>General</h2>
-    <table border="1">
-        <tr>
-            <th>Total</th>
-            <th>Finalizadas</th>
-            <th>Pendientes</th>
-            <th>Con impedimento</th>
-        </tr>
-        <tr>
-            <td><?php echo (int)$general['total']; ?></td>
-            <td><?php echo (int)$general['finalizadas']; ?></td>
-            <td><?php echo (int)$general['pendientes']; ?></td>
-            <td><?php echo (int)$general['impedimentos']; ?></td>
-        </tr>
-    </table>
+    <div class="resumen">
+        <div class="dato"><strong><?php echo (int)$general['total']; ?></strong>Total</div>
+        <div class="dato finalizadas"><strong><?php echo (int)$general['finalizadas']; ?></strong>Finalizadas</div>
+        <div class="dato pendientes"><strong><?php echo (int)$general['pendientes']; ?></strong>Pendientes</div>
+        <div class="dato impedimentos"><strong><?php echo (int)$general['impedimentos']; ?></strong>Con impedimento</div>
+    </div>
 
     <h2>Por responsable</h2>
-    <table border="1">
+    <table>
         <tr>
             <th>Responsable</th>
             <th>Total</th>
@@ -66,7 +65,7 @@ $porSprint = $conexDB->query("select s.nombre, $columnas from historias h inner 
     </table>
 
     <h2>Por sprint</h2>
-    <table border="1">
+    <table>
         <tr>
             <th>Sprint</th>
             <th>Total</th>

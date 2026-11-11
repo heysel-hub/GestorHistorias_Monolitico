@@ -39,35 +39,42 @@ $estados = ['nueva', 'activa', 'finalizada', 'impedimento'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historia de usuario</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
+    <nav>
+        <a href="index.php">Historias</a>
+        <a href="formulario_historia.php">Nueva historia</a>
+        <a href="sprints.php">Sprints</a>
+        <a href="informe.php">Informe</a>
+    </nav>
+
     <h1><?php echo $titulo_pagina; ?></h1>
-    <a href="index.php">Volver</a>
 
     <?php if ($sprints->num_rows == 0) { ?>
-        <p>Primero debes <a href="formulario_sprint.php">crear un sprint</a>.</p>
+        <p class="vacio" style="text-align:center">Primero debes <a href="formulario_sprint.php">crear un sprint</a>.</p>
     <?php } else { ?>
     <form action="<?php echo $action; ?>" method="post">
         <input type="hidden" name="id" value="<?php echo $id; ?>">
         <div>
-            <label for="titulo">Título: </label>
+            <label for="titulo">Título</label>
             <input type="text" name="titulo" id="titulo" maxlength="150" value="<?php echo htmlspecialchars($titulo); ?>" required>
         </div>
         <div>
-            <label for="descripcion">Descripción: </label>
+            <label for="descripcion">Descripción</label>
             <textarea name="descripcion" id="descripcion" rows="4" required><?php echo htmlspecialchars($descripcion); ?></textarea>
         </div>
         <div>
-            <label for="responsable">Responsable: </label>
+            <label for="responsable">Responsable</label>
             <input type="text" name="responsable" id="responsable" maxlength="100" value="<?php echo htmlspecialchars($responsable); ?>" required>
         </div>
         <div>
-            <label for="puntos">Puntos de complejidad: </label>
+            <label for="puntos">Puntos de complejidad</label>
             <input type="number" name="puntos" id="puntos" min="1" value="<?php echo $puntos; ?>" required>
         </div>
         <div>
-            <label for="estado">Estado: </label>
+            <label for="estado">Estado</label>
             <select name="estado" id="estado" required>
                 <?php
                 foreach ($estados as $e) {
@@ -78,7 +85,7 @@ $estados = ['nueva', 'activa', 'finalizada', 'impedimento'];
             </select>
         </div>
         <div>
-            <label for="sprint_id">Sprint: </label>
+            <label for="sprint_id">Sprint</label>
             <select name="sprint_id" id="sprint_id" required>
                 <?php
                 while ($s = $sprints->fetch_assoc()) {
