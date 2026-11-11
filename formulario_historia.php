@@ -1,5 +1,6 @@
 <?php
 require 'conexion.php';
+date_default_timezone_set('America/Bogota');
 
 $sprints = $conexDB->query("select id, nombre from sprints order by fecha_inicio desc");
 $estados = ['nueva', 'activa', 'finalizada', 'impedimento'];
