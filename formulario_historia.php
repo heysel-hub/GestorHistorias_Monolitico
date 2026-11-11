@@ -1,6 +1,6 @@
 <?php
 require 'conexion.php';
-date_default_timezone_set('America/Bogota');
+
 
 $titulo_pagina = "Registrar historia de usuario";
 $action = "operaciones/registrar_historia.php";

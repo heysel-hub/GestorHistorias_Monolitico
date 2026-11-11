@@ -4,6 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     exit;
 }
 require '../conexion.php';
+date_default_timezone_set('America/Bogota');
 
 $titulo = trim($_POST['titulo']);
 $descripcion = trim($_POST['descripcion']);
