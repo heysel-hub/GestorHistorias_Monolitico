@@ -11,7 +11,7 @@ body {
 h1 { text-align: center; margin: 32px 0 8px; }
 h2 { text-align: center; margin: 24px 0 8px; }
 
-a { color: #4f46e5; text-decoration: none; }
+a { color: #dab8f4; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 /* Menú superior */
@@ -20,7 +20,7 @@ nav {
     justify-content: center;
     gap: 28px;
     padding: 16px;
-    background: #1f2a44;
+    background: #705ab8;
     margin: 0 -24px 24px;
 }
 nav a { color: #fff; font-weight: 600; }
@@ -72,7 +72,7 @@ nav a:hover { color: #a5b4fc; text-decoration: none; }
     background: #fafbff;
 }
 .tarjeta.nueva { border-left-color: #3b82f6; }
-.tarjeta.activa { border-left-color: #f59e0b; }
+.tarjeta.activa { border-left-color: #ffa9df; }
 .tarjeta.finalizada { border-left-color: #10b981; }
 .tarjeta.impedimento { border-left-color: #ef4444; }
 .tarjeta h3 { margin: 0 0 8px; }
@@ -95,10 +95,10 @@ nav a:hover { color: #a5b4fc; text-decoration: none; }
     font-size: 12px;
     font-weight: 600;
 }
-.estado.nueva { background: #3b82f6; }
-.estado.activa { background: #f59e0b; }
+.estado.nueva { background: #95b4e6; }
+.estado.activa { background: #ecd0e4; }
 .estado.finalizada { background: #10b981; }
-.estado.impedimento { background: #ef4444; }
+.estado.impedimento { background: #ffabab; }
 .vacio { color: #9ca3af; font-style: italic; }
 
 /* Formularios */
@@ -121,7 +121,7 @@ input, select, textarea {
 }
 input:focus, select:focus, textarea:focus {
     outline: 2px solid #c7d2fe;
-    border-color: #4f46e5;
+    border-color: #a5a0ff;
 }
 button, .boton {
     background: #4f46e5;
@@ -140,7 +140,7 @@ button:hover, .boton:hover { background: #4338ca; text-decoration: none; }
 table {
     border-collapse: collapse;
     margin: 16px auto;
-    background: #fff;
+    background: #aeb3ca;
     border: none;
     border-radius: 12px;
     overflow: hidden;
@@ -163,5 +163,5 @@ td { padding: 10px 18px; border-bottom: 1px solid #e5e7eb; text-align: center; }
 }
 .dato strong { display: block; font-size: 32px; color: #1f2937; }
 .dato.finalizadas { border-top-color: #10b981; }
-.dato.pendientes { border-top-color: #f59e0b; }
+.dato.pendientes { border-top-color: #eec8f4; }
 .dato.impedimentos { border-top-color: #ef4444; }
