@@ -10,3 +10,4 @@ if ($conexDB->connect_error) {
     print($conexDB->connect_error);
     die();
 }
+$conexDB->set_charset('utf8mb4');
