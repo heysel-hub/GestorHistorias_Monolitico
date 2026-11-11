@@ -41,6 +41,13 @@ require 'conexion.php';
                 echo '    <p><b>Responsable: </b>' . htmlspecialchars($h['responsable']) . '</p>';
                 echo '    <p><b>Puntos: </b>' . $h['puntos'] . '</p>';
                 echo '    <p><b>Creada: </b>' . $h['fecha_creacion'] . '</p>';
+                if (!empty($h['fecha_finalizacion'])) {
+                    echo '    <p><b>Finalizada: </b>' . $h['fecha_finalizacion'] . '</p>';
+                }
+                echo '    <div>';
+                echo '        <a href="formulario_historia.php?id=' . $h['id'] . '">Modificar</a> | ';
+                echo '        <a href="operaciones/borrar_historia.php?id=' . $h['id'] . '" onclick="return confirm(\'¿Borrar esta historia?\');">Borrar</a>';
+                echo '    </div>';
                 echo '</div>';
             }
         } else {
