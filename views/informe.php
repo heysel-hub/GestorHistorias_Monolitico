@@ -1,5 +1,5 @@
 <?php
-require 'conexion.php';
+require __DIR__ . '/../conexion.php';
 
 // Cada consulta cuenta las historias por estado.
 // "Pendientes" = nuevas + activas.
@@ -21,12 +21,12 @@ $porSprint = $conexDB->query("select s.nombre, $columnas from historias h inner 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informe</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="../public/css/estilos.css">
 </head>
 
 <body>
     <nav>
-        <a href="index.php">Historias</a>
+        <a href="historias.php">Historias</a>
         <a href="formulario_historia.php">Nueva historia</a>
         <a href="sprints.php">Sprints</a>
         <a href="informe.php">Informe</a>

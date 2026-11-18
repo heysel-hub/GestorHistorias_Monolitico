@@ -1,9 +1,9 @@
 <?php
-require 'conexion.php';
+require __DIR__ . '/../conexion.php';
 
 
 $titulo_pagina = "Registrar historia de usuario";
-$action = "operaciones/registrar_historia.php";
+$action = "actions/registrar_historia.php";
 $id = "";
 $titulo = "";
 $descripcion = "";
@@ -15,7 +15,7 @@ $sprint_id = "";
 if (!empty($_GET['id'])) {
     $id = (int)$_GET['id'];
     $titulo_pagina = "Modificar historia de usuario";
-    $action = "operaciones/modificar_historia.php";
+    $action = "actions/modificar_historia.php";
 
     $sql = "select * from historias where id=$id";
     $result = $conexDB->query($sql);
@@ -40,12 +40,12 @@ $estados = ['nueva', 'activa', 'finalizada', 'impedimento'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historia de usuario</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="../public/css/estilos.css">
 </head>
 
 <body>
     <nav>
-        <a href="index.php">Historias</a>
+        <a href="historias.php">Historias</a>
         <a href="formulario_historia.php">Nueva historia</a>
         <a href="sprints.php">Sprints</a>
         <a href="informe.php">Informe</a>

@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sprint</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="../public/css/estilos.css">
 </head>
 
 <body>
     <nav>
-        <a href="index.php">Historias</a>
+        <a href="historias.php">Historias</a>
         <a href="formulario_historia.php">Nueva historia</a>
         <a href="sprints.php">Sprints</a>
         <a href="informe.php">Informe</a>
@@ -18,7 +18,7 @@
 
     <h1>Registrar sprint</h1>
 
-    <form action="operaciones/registrar_sprint.php" method="post">
+    <form action="actions/registrar_sprint.php" method="post">
         <div>
             <label for="nombre">Nombre</label>
             <input type="text" name="nombre" id="nombre" maxlength="100" required>

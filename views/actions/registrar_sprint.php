@@ -3,7 +3,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     header('Location: ../sprints.php');
     exit;
 }
-require '../conexion.php';
+require __DIR__ . '/../../conexion.php';
 
 $nombre = trim($_POST['nombre']);
 $fecha_inicio = $_POST['fecha_inicio'];
