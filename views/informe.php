@@ -1,8 +1,6 @@
 <?php
 require __DIR__ . '/../conexion.php';
 
-// Cada consulta cuenta las historias por estado.
-// "Pendientes" = nuevas + activas.
 $columnas = "
     count(*) as total,
     sum(estado='finalizada') as finalizadas,

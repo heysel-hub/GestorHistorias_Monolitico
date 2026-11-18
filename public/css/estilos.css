@@ -14,7 +14,6 @@ h2 { text-align: center; margin: 24px 0 8px; }
 a { color: #dab8f4; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* Menú superior */
 nav {
     display: flex;
     justify-content: center;
@@ -26,7 +25,6 @@ nav {
 nav a { color: #fff; font-weight: 600; }
 nav a:hover { color: #a5b4fc; text-decoration: none; }
 
-/* Mensajes */
 .mensaje {
     max-width: 700px;
     margin: 12px auto;
@@ -37,7 +35,7 @@ nav a:hover { color: #a5b4fc; text-decoration: none; }
 .mensaje.ok { background: #d1fae5; color: #065f46; }
 .mensaje.error { background: #fee2e2; color: #991b1b; }
 
-/* Sprints y tarjetas */
+
 .sprint {
     max-width: 1100px;
     margin: 24px auto;
@@ -101,7 +99,6 @@ nav a:hover { color: #a5b4fc; text-decoration: none; }
 .estado.impedimento { background: #ffabab; }
 .vacio { color: #9ca3af; font-style: italic; }
 
-/* Formularios */
 form {
     max-width: 520px;
     margin: 24px auto;
@@ -136,7 +133,6 @@ button, .boton {
 button:hover, .boton:hover { background: #4338ca; text-decoration: none; }
 .boton { display: block; width: max-content; margin: 16px auto; }
 
-/* Tablas */
 table {
     border-collapse: collapse;
     margin: 16px auto;
@@ -150,7 +146,6 @@ table {
 th { background: #1f2a44; color: #fff; padding: 12px 18px; }
 td { padding: 10px 18px; border-bottom: 1px solid #e5e7eb; text-align: center; }
 
-/* Resumen del informe */
 .resumen { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; margin: 16px 0; }
 .dato {
     background: #fff;

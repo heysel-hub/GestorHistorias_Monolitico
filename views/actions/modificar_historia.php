@@ -19,7 +19,6 @@ if ($titulo == '' || $descripcion == '' || $responsable == '' || $puntos < 1 || 
     exit;
 }
 
-// Si pasa a "finalizada" se guarda la fecha (si ya la tenía se conserva); si cambia a otro estado se borra.
 $sql = "update historias set titulo=?, descripcion=?, responsable=?, estado=?, puntos=?, sprint_id=?, ";
 $sql .= " fecha_finalizacion = IF(? = 'finalizada', COALESCE(fecha_finalizacion, CURDATE()), NULL) ";
 $sql .= " where id=?";
